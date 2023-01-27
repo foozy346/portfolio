@@ -33,10 +33,10 @@
             <?php
                 for($i=0; $i < $n ; $i++){
                     if ($page==$i){
-                        echo '<li class="nav-item"><a class="nav-link active " href="main.php?tab='.$i.'">'.$tab_menu[$i].'</a></li>';    
+                        echo '<li class="nav-item"><a class="nav-link active " href="index.php?tab='.$i.'">'.$tab_menu[$i].'</a></li>';    
                     }
                     else{
-                        echo '<li class="nav-item"><a class="nav-link " href="main.php?tab='.$i.'">'.$tab_menu[$i].'</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link " href="index.php?tab='.$i.'">'.$tab_menu[$i].'</a></li>';
                     }
                 }
             ?>
