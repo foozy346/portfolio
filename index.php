@@ -10,6 +10,7 @@
 
     $my_in = file_get_contents('main_page.html');
 
+    $tab_content=array($my_in)
 
 ?>
 
@@ -28,7 +29,7 @@
 </head>
 <body>
     <div class="sticky-top shadow">
-        <ul class="nav nav-tabs nav-fill ">
+        <ul class="nav nav-pills nav-fill ">
             <?php
                 for($i=0; $i < $n ; $i++){
                     if ($page==$i){
@@ -46,10 +47,8 @@
                  <li class="nav-item"><a class="nav-link" href="#">Disabled</a></li> -->
         </ul>
     </div>
-    
     <?php
     echo $my_in;
     ?>
-    
 </body>
 </html>
