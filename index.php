@@ -7,19 +7,27 @@
     else{
         $page = 0;
     }
+    function isMobile() {
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
 
     $my_in = file_get_contents('main_page.html');
+    $Edu = file_get_contents('Education.html');
+    $sk = file_get_contents('skills.html');
+    $crs = file_get_contents('main_page copy.html');
+    $ex = file_get_contents('main_page copy.html');
+    $my_in_sm = file_get_contents('mobile_main.html');
 
-    $tab_content=array($my_in)
+    $tab_content=array($my_in, $Edu, $sk, $crs, $ex)
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>
         Fawzy Nissem CV
     </title>
+    <link rel="icon" type="image/x-icon" href="/files/cv.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -41,14 +49,15 @@
                 }
             ?>
             
-            <!-- <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">Disabled</a></li> -->
         </ul>
     </div>
-    <?php
-    echo $my_in;
+    <?php 
+    if (isMobile()){
+        echo $my_in_sm;
+    }
+    else{
+        echo $tab_content[$page];
+    }
     ?>
 </body>
 </html>

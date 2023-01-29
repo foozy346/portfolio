@@ -21,6 +21,14 @@
     height: 150px;
     width: 150px;
 }
+.prof-sm{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 150px;
+    padding-top: 20px;
+}
 
 .shadow{
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.77);
@@ -30,5 +38,15 @@
 }
 .links{
     width: 100%;
-    background-color: #E9ECEF;
+    background-color: #E9ECEF ;
 }
+/* 
+
+<div class="card text-center" style="width: 9rem;">
+<center><img class="card-img-top center"  style="height: 60px; width: 60px; " src="/files/c.png" ></center>
+<div class="card-body">
+    <h5 class="card-text" >C</h5>
+</div>
+</div> 
+
+*/
