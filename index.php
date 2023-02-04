@@ -14,8 +14,8 @@
     $my_in = file_get_contents('main_page.html');
     $Edu = file_get_contents('Education.html');
     $sk = file_get_contents('skills.html');
-    $crs = file_get_contents('main_page copy.html');
-    $ex = file_get_contents('main_page copy.html');
+    $crs = file_get_contents('courses.html');
+    $ex = file_get_contents('experience.html');
     $my_in_sm = file_get_contents('mobile_main.html');
 
     $tab_content=array($my_in, $Edu, $sk, $crs, $ex)
@@ -27,7 +27,7 @@
     <title>
         Fawzy Nissem CV
     </title>
-    <link rel="icon" type="image/x-icon" href="/files/cv.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -53,10 +53,15 @@
     </div>
     <?php 
     if (isMobile()){
-        echo $my_in_sm;
+        echo $tab_content[$page];
     }
     else{
-        echo $tab_content[$page];
+        if($page==2){
+            include "skills.php"; 
+        }
+        else{
+            echo $tab_content[$page];
+        }
     }
     ?>
 </body>

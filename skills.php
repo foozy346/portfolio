@@ -1,0 +1,91 @@
+<div class="container" style="padding: 20px;">
+    <div class="row justify-content-around align-items-center">
+        <div class="col">
+            <h2>• Tracks Interested In</h2>
+        </div>
+    </div>
+</div>
+<div class="container-fluid " >
+    <div class="row justify-content-around" style="padding-left: 20px; padding-right: 20px;">
+
+        <?php
+        $tracks = array("Embedded Systems", "Back-End Developer", "Flutter Developer", "Network Systems Management");
+        for($i=0; $i < count($tracks) ; $i++){
+        echo '<div class="col-md-auto" >
+                <b>'.$tracks[$i].'</b>
+            </div>';
+        } 
+        ?>
+        
+    </div>
+</div>
+<hr/>
+<div class="container" style="padding: 20px; ">
+    <div class="row justify-content-around align-items-center" >
+            <h2>- My acquired Skills -</h2>
+    </div>
+</div>
+
+<div class="container-fluid ">
+    <div class="row justify-content-around align-items-center">
+        <?php
+        $skilllls = array(
+            "C",
+            "C++",
+            "Blender",
+            "Python",
+            "SQL",
+            "MySQL",
+            "Flutter",
+            "Arduino",
+            "Linux",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "Cyber-Security",
+            "Git",
+            "GitHub",
+            "Proteus",
+            "CCNA & CCNP",
+            "Matlab",
+            "HCIA",
+            "Altium",
+            "BootStrap"
+        );
+        $skil_pic = array(
+            "c.png",
+            "c++.png",
+            "blender.png",
+            "python.png",
+            "sql.png",
+            "mysql.png",
+            "flutter.png",
+            "arduino.png",
+            "linux.png",
+            "html.png",
+            "css.png",
+            "js.png",
+            "php.png",
+            "cs.png",
+            "git.png",
+            "github.png",
+            "proteus.png",
+            "ccna.png",
+            "matlab.png",
+            "hcia.png",
+            "altium.png",
+            "bs.png"
+        );
+        for($i=0; $i < count($skilllls) ; $i++){
+            echo '<div class="card text-center border border-info" style="width: 11rem; margin: 25px;">
+            </br>
+                <center><img class="card-img-top center"  style="height: 60px; width: 60px; " src="/files/'.$skil_pic[$i].'" ></center>
+                <div class="card-body">
+                    <h5 class="card-text" >'.$skilllls[$i].'</h5>
+                </div>
+            </div>';
+        } 
+        ?>
+    </div>
+</div>
