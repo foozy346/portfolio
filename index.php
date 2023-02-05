@@ -1,5 +1,5 @@
 <?php
-    $tab_menu = array("My Info", "Education", "Skills", "Courses", "Exprience");
+    $tab_menu = array("My Info", "Education", "Skills", "Courses", "Exprience", "Contact Me");
     $n=count($tab_menu);
     if (isset($_GET['tab'])){
         $page = $_GET['tab'];
@@ -11,7 +11,7 @@
         return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
     }
 
-    $my_in = file_get_contents('main_page.html');
+    $my_in = file_get_contents('main_page copy.html');
     $Edu = file_get_contents('Education.html');
     $sk = file_get_contents('skills.html');
     $crs = file_get_contents('courses.html');
@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fcf03d2ece.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" title="external style sheet">
 </head>
 <body>

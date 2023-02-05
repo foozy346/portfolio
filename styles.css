@@ -41,3 +41,14 @@
 .text-divider:before{
     content: " "; display: block; border-top: 1px solid #c8c8c8;
 }
+
+.about-img{
+    float: left;
+    width: 500px;  
+    padding-left: 10%;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+/* .about-txt{
+    padding-top: 50px;
+} */
