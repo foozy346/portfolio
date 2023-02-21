@@ -7,18 +7,21 @@
     else{
         $page = 0;
     }
-    function isMobile() {
-        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-    }
+    // function isMobile() {
+    //     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    // }
 
     $my_in = file_get_contents('main_page copy.html');
     $Edu = file_get_contents('Education.html');
-    $sk = file_get_contents('skills.html');
     $crs = file_get_contents('courses.html');
     $ex = file_get_contents('experience.html');
-    $my_in_sm = file_get_contents('mobile_main.html');
 
-    $tab_content=array($my_in, $Edu, $sk, $crs, $ex)
+
+    // https redirect --- doesn't work in local host
+    // if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off"){
+    //     echo  $_SERVER['HTTP_HOST'];
+    //     header('Location: https://fawzy.great-site.net');
+    // }
 
 ?>
 <!DOCTYPE html>
@@ -53,16 +56,25 @@
         </ul>
     </div>
     <?php 
-    if (isMobile()){
-        echo $tab_content[$page];
-    }
-    else{
-        if($page==2){
-            include "skills.php"; 
-        }
-        else{
-            echo $tab_content[$page];
-        }
+    switch($page){
+        case 0:
+            echo $my_in;
+            break;
+        case 1:
+            echo $Edu;
+            break;
+        case 2:
+            include "skills.php";
+            break;
+        case 3:
+            echo $crs;
+            break;
+        case 4:
+            echo $ex;
+            break;
+        case 5:
+            include "contact.php";
+            break;
     }
     ?>
 </body>

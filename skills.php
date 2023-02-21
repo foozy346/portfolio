@@ -9,7 +9,7 @@
     <div class="row justify-content-around" style="padding-left: 20px; padding-right: 20px;">
 
         <?php
-        $tracks = array("Embedded Systems", "Back-End Developer", "Flutter Developer", "Network Systems Management");
+        $tracks = array("Embedded Systems", "Back-End Developer", "Flutter Developer", "Networking");
         for($i=0; $i < count($tracks) ; $i++){
         echo '<div class="col-md-auto" >
                 <b>'.$tracks[$i].'</b>
@@ -78,13 +78,16 @@
             "bs.png"
         );
         for($i=0; $i < count($skilllls) ; $i++){
-            echo '<div class="card text-center border border-info" style="width: 11rem; margin: 25px;">
-            </br>
-                <center><img class="card-img-top center"  style="height: 60px; width: 60px; " src="/files/'.$skil_pic[$i].'" ></center>
-                <div class="card-body">
+            echo '<div class="card text-center border border-info" style="width: 11rem; margin: 25px;"> </br>';
+            if ($skilllls[$i] == "Proteus" || $skilllls[$i] == "PHP" ){
+                echo'<center><img class="card-img-top center"  style="height: 60px; width: 80px; " src="/files/'.$skil_pic[$i].'" ></center>';
+            }else{
+                echo'<center><img class="card-img-top center"  style="height: 60px; width: 60px; " src="/files/'.$skil_pic[$i].'" ></center>';
+            }
+            echo'<div class="card-body">
                     <h5 class="card-text" >'.$skilllls[$i].'</h5>
                 </div>
-            </div>';
+                </div>';
         } 
         ?>
     </div>
