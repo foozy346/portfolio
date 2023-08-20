@@ -10,7 +10,7 @@
     // function isMobile() {
     //     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
     // }
-
+    // echo 'User IP Address - '.$_SERVER['REMOTE_ADDR'];  
     $my_in = file_get_contents('main_page copy.html');
     $Edu = file_get_contents('Education.html');
     $crs = file_get_contents('courses.html');
