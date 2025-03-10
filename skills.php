@@ -32,7 +32,7 @@
         $skilllls = array(
             "C",
             "C++",
-            "Blender",
+            "Altium",
             "Python",
             "SQL",
             "MySQL",
@@ -50,13 +50,13 @@
             "CCNA & CCNP",
             "Matlab",
             "HCIA",
-            "Altium",
-            "BootStrap"
+            "BootStrap",
+            "Blender",
         );
         $skil_pic = array(
             "c.png",
             "c++.png",
-            "blender.png",
+            "altium.png",
             "python.png",
             "sql.png",
             "mysql.png",
@@ -74,8 +74,8 @@
             "ccna.png",
             "matlab.png",
             "hcia.png",
-            "altium.png",
-            "bs.png"
+            "bs.png",
+            "blender.png",
         );
         for($i=0; $i < count($skilllls) ; $i++){
             echo '<div class="card text-center border border-info" style="width: 11rem; margin: 25px;"> </br>';
@@ -92,3 +92,4 @@
         ?>
     </div>
 </div>
+<br>

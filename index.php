@@ -11,7 +11,7 @@
     //     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
     // }
     // echo 'User IP Address - '.$_SERVER['REMOTE_ADDR'];  
-    $my_in = file_get_contents('main_page copy.html');
+    $my_in = file_get_contents('main_page.html');
     $Edu = file_get_contents('Education.html');
     $crs = file_get_contents('courses.html');
     $ex = file_get_contents('experience.html');
@@ -77,5 +77,58 @@
             break;
     }
     ?>
+    <!-- the footer of all pages -->
+    <footer class="text-center text-white" style="background-color: #E9ECEF ;">
+        <div class="container pt-4">
+        <section>
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://www.linkedin.com/in/fawzy-nissem-719082195/"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://github.com/foozy346"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+            ></a>
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="index.php?tab=5"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fa-sharp fa-solid fa-envelope"></i>
+            </a>
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://wa.me/201018174206"
+            role="button"
+            data-mdb-ripple-color="dark">
+            <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://t.me/+201018174206"
+            role="button"
+            data-mdb-ripple-color="dark">
+            <i class="fa-brands fa-telegram"></i>
+            </a>
+    
+        </section>
+        
+        </div>
+        <div class="text-right text-dark " style="background-color:#E9ECEF; font-family: Arial, sans-serif; font-size: 0.875em " >
+            <strong>
+            Last Edited : MAR 2025
+            </strong>
+        </div>
+        <div class="text-center text-dark p-3" style="background-color:#bec1c5 ;">
+            © 2023 Copyright:
+            <a class="text-dark" href="https://fawzy.great-site.net/">fawzy.great-site.net</a>
+        </div>
+    </footer>
 </body>
 </html>
