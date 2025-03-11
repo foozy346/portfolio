@@ -8,10 +8,10 @@ $mail= new PHPMailer(true);
 
 $mail->isSMTP();
 $mail->SMTPAuth = true;
-$mail->Host = 'smtp-relay.sendinblue.com';
+$mail->Host = 'smtp-relay.brevo.com';
 $mail->Port = 587;
 $mail->Username = "fawzy346@gmail.com";
-$mail->Password = "xsmtpsib-cc5fa9406d513fd1e6b1ab4d2b9cc7f1aa6db0a5ae56069d888b5f2488cf537d-pQk1Z7jPAHLaJqDr";
+$mail->Password = "MJR0a7Z8jODmE6dq";
 $mail->addAddress("fawzy346@gmail.com");
 
 $is_ok=0;
@@ -100,50 +100,3 @@ if (count($_POST) > 0) {
 </div>
 
 <br><br>
-<footer class="text-center text-white" style="background-color: #E9ECEF ;">
-  <div class="container pt-4">
-    <section class="mb-4">
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.linkedin.com/in/fawzy-nissem-719082195/"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://github.com/foozy346"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="index.php?tab=5"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fa-sharp fa-solid fa-envelope"></i>
-      </a>
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://wa.me/201018174206"
-        role="button"
-        data-mdb-ripple-color="dark">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://t.me/+201018174206"
-        role="button"
-        data-mdb-ripple-color="dark">
-        <i class="fa-brands fa-telegram"></i>
-      </a>
-    </section>
-  </div>
-
-  <div class="text-center text-dark p-3" style="background-color:#bec1c5 ;">
-      © 2023 Copyright:
-      <a class="text-dark" href="https://fawzy.great-site.net/">fawzy.great-site.net</a>
-  </div>
-</footer>
-    
