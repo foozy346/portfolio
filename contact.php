@@ -11,7 +11,7 @@ $mail->SMTPAuth = true;
 $mail->Host = 'smtp-relay.brevo.com';
 $mail->Port = 587;
 $mail->Username = "fawzy346@gmail.com";
-$mail->Password = "xxxxxxxxxxxxxxxxx"; //secret 
+$mail->Password = "xxxxxxxxxxxxxxxxx"; //secret
 $mail->addAddress("fawzy346@gmail.com");
 
 $is_ok=0;
